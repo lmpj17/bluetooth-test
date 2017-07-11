@@ -87,6 +87,7 @@ var app = {
 
     },
     connect: function(e) {
+        console.log('connect----');
         var onConnect = function() {
                 // subscribe for incoming data
                 bluetoothSerial.subscribe('\n', app.onData, app.onError);
@@ -128,10 +129,10 @@ var app = {
     },
     showMainPage: function() {
         mainPage.style.display = "";
-        detailPage.style.display = "none";
+        detailPage.style.display = "";
     },
     showDetailPage: function() {
-        mainPage.style.display = "none";
+        mainPage.style.display = "";
         detailPage.style.display = "";
     },
     setStatus: function(message) {
